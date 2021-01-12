@@ -696,6 +696,7 @@ MISSING-LINK: css/geometry/*.any.js
 MISSING-LINK: css/filter-effects/*.any.js
 
 # Tests that use WebKit/Blink testing APIs
+LAYOUTTESTS APIS: bluetooth/resources/bluetooth-fake-adapter.js
 LAYOUTTESTS APIS: import-maps/data-driven/resources/test-helper-iframe.js
 LAYOUTTESTS APIS: resources/chromium/enable-hyperlink-auditing.js
 LAYOUTTESTS APIS: resources/chromium/generic_sensor_mocks.js
