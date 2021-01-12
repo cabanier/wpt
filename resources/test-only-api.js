@@ -62,7 +62,7 @@ async function loadMojoResources(resources, lite = false) {
     return;
   }
 
-  let genPrefix = '';
+  let genPrefix = '..';
   if (self.location.pathname.includes('/web_tests/')) {
     // Blink internal web tests
     genPrefix = 'file://';

@@ -24,7 +24,7 @@ function xr_promise_test(name, func, properties, glContextType, glContextPropert
     if (!navigator.xr.test) {
       // Load test-only API helpers.
       const script = document.createElement('script');
-      script.src = '/resources/test-only-api.js';
+      script.src = '../resources/test-only-api.js';
       script.async = false;
       const p = new Promise((resolve, reject) => {
         script.onload = () => { resolve(); };
@@ -205,29 +205,29 @@ function forEachWebxrObject(callback) {
 // Code for loading test API in Chromium.
 async function loadChromiumResources() {
   const chromiumResources = [
-    '/gen/mojo/public/mojom/base/time.mojom.js',
-    '/gen/mojo/public/mojom/base/shared_memory.mojom.js',
-    '/gen/mojo/public/mojom/base/unguessable_token.mojom.js',
-    '/gen/gpu/ipc/common/sync_token.mojom.js',
-    '/gen/gpu/ipc/common/mailbox.mojom.js',
-    '/gen/gpu/ipc/common/mailbox_holder.mojom.js',
-    '/gen/ui/gfx/geometry/mojom/geometry.mojom.js',
-    '/gen/ui/gfx/mojom/native_handle_types.mojom.js',
-    '/gen/ui/gfx/mojom/buffer_types.mojom.js',
-    '/gen/ui/gfx/mojom/color_space.mojom.js',
-    '/gen/ui/gfx/mojom/display_color_spaces.mojom.js',
-    '/gen/ui/gfx/mojom/gpu_fence_handle.mojom.js',
-    '/gen/ui/gfx/mojom/transform.mojom.js',
-    '/gen/ui/display/mojom/display.mojom.js',
-    '/gen/device/gamepad/public/mojom/gamepad.mojom.js',
-    '/gen/device/vr/public/mojom/vr_service.mojom.js',
+    '../gen/mojo/public/mojom/base/time.mojom.js',
+    '../gen/mojo/public/mojom/base/shared_memory.mojom.js',
+    '../gen/mojo/public/mojom/base/unguessable_token.mojom.js',
+    '../gen/gpu/ipc/common/sync_token.mojom.js',
+    '../gen/gpu/ipc/common/mailbox.mojom.js',
+    '../gen/gpu/ipc/common/mailbox_holder.mojom.js',
+    '../gen/ui/gfx/geometry/mojom/geometry.mojom.js',
+    '../gen/ui/gfx/mojom/native_handle_types.mojom.js',
+    '../gen/ui/gfx/mojom/buffer_types.mojom.js',
+    '../gen/ui/gfx/mojom/color_space.mojom.js',
+    '../gen/ui/gfx/mojom/display_color_spaces.mojom.js',
+    '../gen/ui/gfx/mojom/gpu_fence_handle.mojom.js',
+    '../gen/ui/gfx/mojom/transform.mojom.js',
+    '../gen/ui/display/mojom/display.mojom.js',
+    '../gen/device/gamepad/public/mojom/gamepad.mojom.js',
+    '../gen/device/vr/public/mojom/vr_service.mojom.js',
   ];
 
   let extraResources = [
-    '/resources/chromium/webxr-test-math-helper.js',
-    '/resources/chromium/webxr-test.js',
-    '/resources/testdriver.js',
-    '/resources/testdriver-vendor.js',
+    '../resources/chromium/webxr-test-math-helper.js',
+    '../resources/chromium/webxr-test.js',
+    '../resources/testdriver.js',
+    '../resources/testdriver-vendor.js',
   ];
   // This infrastructure is also used by Chromium-specific internal tests that
   // may need additional resources (e.g. internal API extensions), this allows
